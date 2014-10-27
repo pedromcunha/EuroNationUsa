@@ -1,0 +1,112 @@
+//Imports
+@import "compass";
+// @import "compass/reset";
+@import "compass/css3/transition";
+//Variables
+$white: #ffffff;
+$darkGrey: #5e5f5f;
+$lightBlue: #37c6f4;
+$pulsatingBlue: #10AFE2;
+$black: #000000;
+//Fonts
+
+//Styles
+body {
+	background-color: $darkGrey;
+	color: $lightBlue;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Exo', sans-serif;
+}
+
+@-webkit-keyframes glow {
+    0% {
+		box-shadow: 0 0 5px rgba(55, 198, 244, .2), inset 0 0 5px rgba(55, 198, 244, .1), 0 2px 0 #000;
+    }	
+    100% {
+		box-shadow: 0 0 20px rgba(55, 198, 244, .6), inset 0 0 10px rgba(55, 198, 244, .4), 0 2px 0 #000;
+    }
+}
+
+@-moz-keyframes glow {
+    0% {
+		box-shadow: 0 0 5px rgba(55, 198, 244, .2), inset 0 0 5px rgba(55, 198, 244, .1), 0 2px 0 #000;
+    }	
+    100% {
+		box-shadow: 0 0 20px rgba(55, 198, 244, .6), inset 0 0 10px rgba(55, 198, 244, .4), 0 2px 0 #000;
+    }
+}
+
+@-o-keyframes glow {
+	0% {
+		box-shadow: 0 0 5px rgba(55, 198, 244, .2), inset 0 0 5px rgba(55, 198, 244, .1), 0 2px 0 #000;
+    }	
+    100% {
+		box-shadow: 0 0 20px rgba(55, 198, 244, .6), inset 0 0 10px rgba(55, 198, 244, .4), 0 2px 0 #000;
+    }
+}
+@-ms-keyframes glow {
+    0% {
+		box-shadow: 0 0 5px rgba(55, 198, 244, .2), inset 0 0 5px rgba(55, 198, 244, .1), 0 2px 0 #000;
+    }	
+    100% {
+		box-shadow: 0 0 20px rgba(55, 198, 244, .6), inset 0 0 10px rgba(55, 198, 244, .4), 0 2px 0 #000;
+    }
+}
+
+@keyframes glow {
+    0% {
+		box-shadow: 0 0 5px rgba(55, 198, 244, .2), inset 0 0 5px rgba(55, 198, 244, .1), 0 2px 0 #000;
+    }	
+    100% {
+		box-shadow: 0 0 20px rgba(55, 198, 244, .6), inset 0 0 10px rgba(55, 198, 244, .4), 0 2px 0 #000;
+    }
+}
+
+.navbar-default {
+	background-color: $black;
+	color: $lightBlue;
+	border: none;
+	box-shadow: 0px 3px 10px #37c6f4;
+
+	-webkit-animation: glow 800ms ease-out infinite alternate;
+	-moz-animation: glow 800ms ease-out infinite alternate;
+	-o-animation: glow 800ms ease-out infinite alternate;
+	-ms-animation: glow 800ms ease-out infinite alternate;
+	animation: glow 800ms ease-out infinite alternate;
+
+	.container-fluid {
+		background-color: $black;
+
+		span.navbar-brand {
+			img {
+				width: 100px;
+				margin-top: -5px;
+				margin-left: 37px;
+				margin-right: -20px;
+			}
+		}
+
+		.navbar-nav {
+			li {
+				margin-left: 90px;
+				a {
+					color: $lightBlue;
+					@include transition-property(color);
+					@include transition-duration(1s);
+				}
+			}
+			li:hover { 
+				a {
+					color: $darkGrey;
+				}
+			}
+			li.activated { 
+				a {
+					color: $darkGrey;
+				}
+			}
+		}
+	}
+}

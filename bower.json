@@ -1,0 +1,13 @@
+{
+  "name": "EuroNationUsa",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pedromcunha/EuroNationUsa",
+  "authors": [
+    "pedromcunha <pedro.spinsomewebs@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
