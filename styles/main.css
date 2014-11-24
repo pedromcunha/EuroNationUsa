@@ -1,75 +1,100 @@
-/* line 14, main.scss */
+/* line 15, main.scss */
+.btn-primary {
+  color: #37c6f4;
+  background-color: black;
+  border-color: black;
+}
+
+/* line 23, main.scss */
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  color: #37c6f4;
+  background-color: black;
+  border-color: black;
+  outline-offset: -2px;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline: 5px auto -moz-focus-ring-color;
+  outline: 5px auto -o-focus-ring-color;
+  -webkit-animation: glow 800ms ease-out infinite alternate;
+  -moz-animation: glow 800ms ease-out infinite alternate;
+  -o-animation: glow 800ms ease-out infinite alternate;
+  -ms-animation: glow 800ms ease-out infinite alternate;
+  animation: glow 800ms ease-out infinite alternate;
+}
+
+/* line 41, main.scss */
 body {
   background-color: #5e5f5f;
   color: #37c6f4;
 }
 
-/* line 19, main.scss */
+/* line 46, main.scss */
 h1, h2, h3, h4, h5 {
   font-family: 'Exo', sans-serif;
 }
 
 @-webkit-keyframes glow {
-  /* line 24, main.scss */
+  /* line 51, main.scss */
   0% {
     box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
   }
 
-  /* line 27, main.scss */
+  /* line 54, main.scss */
   100% {
     box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
   }
 }
 
 @-moz-keyframes glow {
-  /* line 33, main.scss */
+  /* line 60, main.scss */
   0% {
     box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
   }
 
-  /* line 36, main.scss */
+  /* line 63, main.scss */
   100% {
     box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
   }
 }
 
 @-o-keyframes glow {
-  /* line 42, main.scss */
+  /* line 69, main.scss */
   0% {
     box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
   }
 
-  /* line 45, main.scss */
+  /* line 72, main.scss */
   100% {
     box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
   }
 }
 
 @-ms-keyframes glow {
-  /* line 50, main.scss */
+  /* line 77, main.scss */
   0% {
     box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
   }
 
-  /* line 53, main.scss */
+  /* line 80, main.scss */
   100% {
     box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
   }
 }
 
 @keyframes glow {
-  /* line 59, main.scss */
+  /* line 86, main.scss */
   0% {
     box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
   }
 
-  /* line 62, main.scss */
+  /* line 89, main.scss */
   100% {
     box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
   }
 }
 
-/* line 67, main.scss */
+/* line 94, main.scss */
 .navbar-default {
   background-color: black;
   color: #37c6f4;
@@ -81,22 +106,22 @@ h1, h2, h3, h4, h5 {
   -ms-animation: glow 800ms ease-out infinite alternate;
   animation: glow 800ms ease-out infinite alternate;
 }
-/* line 79, main.scss */
+/* line 106, main.scss */
 .navbar-default .container-fluid {
   background-color: black;
 }
-/* line 83, main.scss */
+/* line 110, main.scss */
 .navbar-default .container-fluid span.navbar-brand img {
   width: 100px;
   margin-top: -5px;
   margin-left: 37px;
   margin-right: -20px;
 }
-/* line 92, main.scss */
+/* line 119, main.scss */
 .navbar-default .container-fluid .navbar-nav li {
   margin-left: 90px;
 }
-/* line 94, main.scss */
+/* line 121, main.scss */
 .navbar-default .container-fluid .navbar-nav li a {
   color: #37c6f4;
   -webkit-transition-property: color;
@@ -108,11 +133,21 @@ h1, h2, h3, h4, h5 {
   -o-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 101, main.scss */
+/* line 128, main.scss */
 .navbar-default .container-fluid .navbar-nav li:hover a {
   color: #5e5f5f;
 }
-/* line 106, main.scss */
+/* line 133, main.scss */
 .navbar-default .container-fluid .navbar-nav li.activated a {
   color: #5e5f5f;
+}
+
+/* line 141, main.scss */
+.button-selection {
+  margin: 15px 0px;
+}
+/* line 144, main.scss */
+.button-selection select {
+  background-color: black;
+  border: #37c6f4;
 }

@@ -10,6 +10,33 @@ $pulsatingBlue: #10AFE2;
 $black: #000000;
 //Fonts
 
+
+//Bootstrap overrides
+.btn-primary {
+	color: $lightBlue;
+	background-color: $black;
+	border-color: $black;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+	color: $lightBlue;
+	background-color: $black;
+	border-color: $black;
+
+	outline-offset: -2px;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline: 5px auto -moz-focus-ring-color;
+	outline: 5px auto -o-focus-ring-color;
+
+	-webkit-animation: glow 800ms ease-out infinite alternate;
+	-moz-animation: glow 800ms ease-out infinite alternate;
+	-o-animation: glow 800ms ease-out infinite alternate;
+	-ms-animation: glow 800ms ease-out infinite alternate;
+	animation: glow 800ms ease-out infinite alternate;
+}
+
 //Styles
 body {
 	background-color: $darkGrey;
@@ -108,5 +135,14 @@ h1, h2, h3, h4, h5 {
 				}
 			}
 		}
+	}
+}
+
+.button-selection {
+	margin: 15px 0px;
+
+	select {
+		background-color: $black;
+		border: $lightBlue;
 	}
 }
