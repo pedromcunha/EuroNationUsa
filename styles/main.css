@@ -142,11 +142,17 @@ h1, h2, h3, h4, h5 {
   color: #5e5f5f;
 }
 
-/* line 141, main.scss */
+/* line 140, main.scss */
+.cart {
+  padding-top: 8px;
+  margin-bottom: 0px;
+}
+
+/* line 146, main.scss */
 .button-selection {
   margin: 15px 0px;
 }
-/* line 144, main.scss */
+/* line 149, main.scss */
 .button-selection select {
   background-color: black;
   border: #37c6f4;
