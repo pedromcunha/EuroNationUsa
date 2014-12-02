@@ -9,12 +9,19 @@ var paypalAddToCart =
 		'<option value="Medium">Medium </option>'+
 		'<option value="Small">Small </option>'+
 	'</select> </td></tr>'+
-	'<tr><td><input type="hidden" name="on1" value="Color">Color</td></tr><tr><td><select name="os1">' +
+	'<tr><td><input type="hidden" name="on1" value="T-shirt Color">T-shirt Color</td></tr><tr><td><select name="os1">' +
 		'<option value="Grey">Grey </option>' +
 		'<option value="Black">Black </option>' +
 		'<option value="White">White </option>' +
+		'<option value="Teal">Teal </option>' +
 	'</select> </td></tr>' +
-	'<tr style="display: none;"><td><input class="designInput" type="hidden" name="on2" value="Design">Design</td></tr><tr style="display: none;"><td><input type="text" name="os2" maxlength="200"></td></tr>'+
+	'<tr><td><input type="hidden" name="on2" value="Design Color">Design Color</td></tr><tr><td><select name="os2">' +
+		'<option value="Grey">Grey </option>' +
+		'<option value="Black">Black </option>' +
+		'<option value="White">White </option>' +
+		'<option value="Teal">Teal </option>' +
+	'</select> </td></tr>' +
+	'<tr style="display: none;"><td><input class="designInput" type="hidden" name="on3" value="Design">Design</td></tr><tr style="display: none;"><td><input type="text" name="os3" maxlength="200"></td></tr>'+
 	'</table>'+
 	'<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">'+
 	'<button type="submit" class="btn btn-primary paypal" name="submit" alt="PayPal - The safer, easier way to pay online!"><i class="fa fa-shopping-cart"></i> Add to cart </button>'+
@@ -50,11 +57,12 @@ $(document).ready(function() {
     $('.nav').children('li').children('a').bind('click', function(event) {
     	event.preventDefault();
     	var clickedTab = $(this).attr('href');
+
 		$('.nav').children('li').removeClass('activated'); 	
 		$(this).parent().addClass('activated');
 		sections.hide('slow');
 		$(clickedTab).show('slow');
     });
-
-
 });
+
+
