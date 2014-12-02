@@ -33,6 +33,10 @@ var viewCartButton =
 $(document).ready(function() {
     $('.paypal-cart').html(paypalAddToCart);
     $('.paypal-view-cart').html(viewCartButton);
+    //sections on the webpage
+    var sections = $('.container').children('section');
+    sections.hide();
+    $('#home').show();
 
     //Change the design value on the fly
     $('.paypal').bind('click', function() {
@@ -40,6 +44,16 @@ $(document).ready(function() {
     	var designInput = $(this).parent().find('.designInput');
 
     	designInput.val('Design' + design);
+    });
+
+    //pagination
+    $('.nav').children('li').children('a').bind('click', function(event) {
+    	event.preventDefault();
+    	var clickedTab = $(this).attr('href');
+		$('.nav').children('li').removeClass('activated'); 	
+		$(this).parent().addClass('activated');
+		sections.hide('slow');
+		$(clickedTab).show('slow');
     });
 
 
