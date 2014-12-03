@@ -218,3 +218,8 @@ h1, h2, h3, h4, h5 {
   width: 100%;
   color: black;
 }
+
+/* line 212, main.scss */
+#apparel .row + .row {
+  margin-top: 25px;
+}
