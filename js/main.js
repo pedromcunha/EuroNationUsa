@@ -36,7 +36,7 @@ var viewCartButton =
 		'<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">' +
 	'</form>';
 
-
+var loadingIcon = '<div class="loading"><i class="fa fa-spin fa-spinner"></i></div>';
 $(document).ready(function() {
     $('.paypal-cart').html(paypalAddToCart);
     $('.paypal-view-cart').html(viewCartButton);
@@ -63,12 +63,18 @@ $(document).ready(function() {
 		sections.hide('slow');
 		$(clickedTab).show('slow');
     });
+
+    //Add loading for all images
+    $('.shirt-image').after(loadingIcon);
+
     //shirt modal
     $('.shirt-image').bind('click', function(event) {
     	var imageUrl = $(this).attr('src');
     	$('#tshirt-modal-image').attr('src', imageUrl);
     	$('#tshirt-modal').modal('show');
     });
+    $('.shirt-image').on('load', function(){
+	  // hide/remove the loading image
+	  $(this).next('.loading').remove();
+	});
 });
-
-
