@@ -283,3 +283,22 @@ h1, h2, h3, h4, h5 {
   height: 65%;
   border: 2px solid black;
 }
+
+/* line 264, main.scss */
+.loading {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  opacity: 0.6;
+}
+/* line 272, main.scss */
+.loading .fa-spin {
+  font-size: 50px;
+  vertical-align: middle;
+  line-height: 227px;
+  text-align: center;
+  width: 100%;
+  color: black;
+}
