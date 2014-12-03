@@ -9,13 +9,32 @@
 }
 
 /* line 24, main.scss */
+.carousel-control {
+  color: #5e5f5f;
+}
+
+/* line 28, main.scss */
+.carousel .left {
+  text-shadow: -3px 0px #37c6f4;
+}
+/* line 32, main.scss */
+.carousel .right {
+  text-shadow: 3px 0px #37c6f4;
+}
+
+/* line 37, main.scss */
+.carousel-control:hover, .carousel-control:focus {
+  color: #5e5f5f;
+}
+
+/* line 41, main.scss */
 .btn-primary {
   color: #37c6f4;
   background-color: black;
   border-color: black;
 }
 
-/* line 32, main.scss */
+/* line 49, main.scss */
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
@@ -33,54 +52,30 @@
   animation: glow 800ms ease-out infinite alternate;
 }
 
-/* line 50, main.scss */
+/* line 67, main.scss */
 body {
   background-color: #5e5f5f;
   color: #37c6f4;
 }
 
-/* line 55, main.scss */
+/* line 72, main.scss */
 h1, h2, h3, h4, h5 {
   font-family: 'Exo', sans-serif;
 }
 
 @-webkit-keyframes glow {
-  /* line 60, main.scss */
+  /* line 77, main.scss */
   0% {
     box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
   }
 
-  /* line 63, main.scss */
+  /* line 80, main.scss */
   100% {
     box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
   }
 }
 
 @-moz-keyframes glow {
-  /* line 69, main.scss */
-  0% {
-    box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
-  }
-
-  /* line 72, main.scss */
-  100% {
-    box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
-  }
-}
-
-@-o-keyframes glow {
-  /* line 78, main.scss */
-  0% {
-    box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
-  }
-
-  /* line 81, main.scss */
-  100% {
-    box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
-  }
-}
-
-@-ms-keyframes glow {
   /* line 86, main.scss */
   0% {
     box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
@@ -92,7 +87,7 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-@keyframes glow {
+@-o-keyframes glow {
   /* line 95, main.scss */
   0% {
     box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
@@ -104,7 +99,31 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* line 103, main.scss */
+@-ms-keyframes glow {
+  /* line 103, main.scss */
+  0% {
+    box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
+  }
+
+  /* line 106, main.scss */
+  100% {
+    box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
+  }
+}
+
+@keyframes glow {
+  /* line 112, main.scss */
+  0% {
+    box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
+  }
+
+  /* line 115, main.scss */
+  100% {
+    box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
+  }
+}
+
+/* line 120, main.scss */
 .navbar-default {
   background-color: black;
   color: #37c6f4;
@@ -116,22 +135,22 @@ h1, h2, h3, h4, h5 {
   -ms-animation: glow 800ms ease-out infinite alternate;
   animation: glow 800ms ease-out infinite alternate;
 }
-/* line 115, main.scss */
+/* line 132, main.scss */
 .navbar-default .container-fluid {
   background-color: black;
 }
-/* line 119, main.scss */
+/* line 136, main.scss */
 .navbar-default .container-fluid span.navbar-brand img {
   width: 100px;
   margin-top: -5px;
   margin-left: 37px;
   margin-right: -20px;
 }
-/* line 128, main.scss */
+/* line 145, main.scss */
 .navbar-default .container-fluid .navbar-nav li {
   margin-left: 90px;
 }
-/* line 130, main.scss */
+/* line 147, main.scss */
 .navbar-default .container-fluid .navbar-nav li a {
   color: #37c6f4;
   -webkit-transition-property: color;
@@ -143,32 +162,32 @@ h1, h2, h3, h4, h5 {
   -o-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 137, main.scss */
+/* line 154, main.scss */
 .navbar-default .container-fluid .navbar-nav li:hover a {
   color: #5e5f5f;
 }
-/* line 142, main.scss */
+/* line 159, main.scss */
 .navbar-default .container-fluid .navbar-nav li.activated a {
   color: #5e5f5f;
 }
 
-/* line 149, main.scss */
+/* line 166, main.scss */
 .cart {
   padding-top: 8px;
   margin-bottom: 0px;
 }
 
-/* line 155, main.scss */
+/* line 172, main.scss */
 .button-selection {
   margin: 15px 0px;
 }
-/* line 158, main.scss */
+/* line 175, main.scss */
 .button-selection select {
   background-color: black;
   border: #37c6f4;
 }
 
-/* line 164, main.scss */
+/* line 181, main.scss */
 .shirt-image {
   width: 100%;
   border: 2px solid black;

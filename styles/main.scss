@@ -21,6 +21,23 @@ $black: #000000;
 	}
 }
 
+.carousel-control {
+	color: $darkGrey;
+}
+.carousel {
+	.left {
+		text-shadow: -3px 0px $lightBlue;
+	}
+
+	.right {
+		text-shadow: 3px 0px $lightBlue;
+	}
+}
+
+.carousel-control:hover, .carousel-control:focus {
+	color: $darkGrey;
+}
+
 .btn-primary {
 	color: $lightBlue;
 	background-color: $black;
