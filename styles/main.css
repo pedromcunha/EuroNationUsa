@@ -1,11 +1,21 @@
 /* line 15, main.scss */
+.carousel-indicators li {
+  border: 1px solid #37c6f4;
+}
+/* line 18, main.scss */
+.carousel-indicators .active {
+  background-color: #5e5f5f;
+  border: 1px solid #37c6f4;
+}
+
+/* line 24, main.scss */
 .btn-primary {
   color: #37c6f4;
   background-color: black;
   border-color: black;
 }
 
-/* line 23, main.scss */
+/* line 32, main.scss */
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
@@ -23,30 +33,18 @@
   animation: glow 800ms ease-out infinite alternate;
 }
 
-/* line 41, main.scss */
+/* line 50, main.scss */
 body {
   background-color: #5e5f5f;
   color: #37c6f4;
 }
 
-/* line 46, main.scss */
+/* line 55, main.scss */
 h1, h2, h3, h4, h5 {
   font-family: 'Exo', sans-serif;
 }
 
 @-webkit-keyframes glow {
-  /* line 51, main.scss */
-  0% {
-    box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
-  }
-
-  /* line 54, main.scss */
-  100% {
-    box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
-  }
-}
-
-@-moz-keyframes glow {
   /* line 60, main.scss */
   0% {
     box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
@@ -58,7 +56,7 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-@-o-keyframes glow {
+@-moz-keyframes glow {
   /* line 69, main.scss */
   0% {
     box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
@@ -70,19 +68,19 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-@-ms-keyframes glow {
-  /* line 77, main.scss */
+@-o-keyframes glow {
+  /* line 78, main.scss */
   0% {
     box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
   }
 
-  /* line 80, main.scss */
+  /* line 81, main.scss */
   100% {
     box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
   }
 }
 
-@keyframes glow {
+@-ms-keyframes glow {
   /* line 86, main.scss */
   0% {
     box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
@@ -94,7 +92,19 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* line 94, main.scss */
+@keyframes glow {
+  /* line 95, main.scss */
+  0% {
+    box-shadow: 0 0 5px rgba(55, 198, 244, 0.2), inset 0 0 5px rgba(55, 198, 244, 0.1), 0 2px 0 black;
+  }
+
+  /* line 98, main.scss */
+  100% {
+    box-shadow: 0 0 20px rgba(55, 198, 244, 0.6), inset 0 0 10px rgba(55, 198, 244, 0.4), 0 2px 0 black;
+  }
+}
+
+/* line 103, main.scss */
 .navbar-default {
   background-color: black;
   color: #37c6f4;
@@ -106,22 +116,22 @@ h1, h2, h3, h4, h5 {
   -ms-animation: glow 800ms ease-out infinite alternate;
   animation: glow 800ms ease-out infinite alternate;
 }
-/* line 106, main.scss */
+/* line 115, main.scss */
 .navbar-default .container-fluid {
   background-color: black;
 }
-/* line 110, main.scss */
+/* line 119, main.scss */
 .navbar-default .container-fluid span.navbar-brand img {
   width: 100px;
   margin-top: -5px;
   margin-left: 37px;
   margin-right: -20px;
 }
-/* line 119, main.scss */
+/* line 128, main.scss */
 .navbar-default .container-fluid .navbar-nav li {
   margin-left: 90px;
 }
-/* line 121, main.scss */
+/* line 130, main.scss */
 .navbar-default .container-fluid .navbar-nav li a {
   color: #37c6f4;
   -webkit-transition-property: color;
@@ -133,27 +143,33 @@ h1, h2, h3, h4, h5 {
   -o-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 128, main.scss */
+/* line 137, main.scss */
 .navbar-default .container-fluid .navbar-nav li:hover a {
   color: #5e5f5f;
 }
-/* line 133, main.scss */
+/* line 142, main.scss */
 .navbar-default .container-fluid .navbar-nav li.activated a {
   color: #5e5f5f;
 }
 
-/* line 140, main.scss */
+/* line 149, main.scss */
 .cart {
   padding-top: 8px;
   margin-bottom: 0px;
 }
 
-/* line 146, main.scss */
+/* line 155, main.scss */
 .button-selection {
   margin: 15px 0px;
 }
-/* line 149, main.scss */
+/* line 158, main.scss */
 .button-selection select {
   background-color: black;
   border: #37c6f4;
+}
+
+/* line 164, main.scss */
+.shirt-image {
+  width: 100%;
+  border: 2px solid black;
 }

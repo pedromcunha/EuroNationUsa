@@ -10,8 +10,17 @@ $pulsatingBlue: #10AFE2;
 $black: #000000;
 //Fonts
 
-
 //Bootstrap overrides
+.carousel-indicators {
+	li {
+		border: 1px solid $lightBlue;
+	}
+	.active {
+		background-color: $darkGrey;
+		border: 1px solid $lightBlue;
+	}
+}
+
 .btn-primary {
 	color: $lightBlue;
 	background-color: $black;
@@ -150,4 +159,9 @@ h1, h2, h3, h4, h5 {
 		background-color: $black;
 		border: $lightBlue;
 	}
+}
+
+.shirt-image {
+	width: 100%;
+	border: 2px solid $black;
 }
