@@ -63,6 +63,12 @@ $(document).ready(function() {
 		sections.hide('slow');
 		$(clickedTab).show('slow');
     });
+    //shirt modal
+    $('.shirt-image').bind('click', function(event) {
+    	var imageUrl = $(this).attr('src');
+    	$('#tshirt-modal-image').attr('src', imageUrl);
+    	$('#tshirt-modal').modal('show');
+    });
 });
 
 

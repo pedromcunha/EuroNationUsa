@@ -177,8 +177,14 @@ h1, h2, h3, h4, h5 {
 		border: $lightBlue;
 	}
 }
-
+//T-shirt image styles
 .shirt-image {
 	width: 100%;
+	border: 2px solid $black;
+}
+
+#tshirt-modal-image {
+	width: auto;
+	height: 65%;
 	border: 2px solid $black;
 }
