@@ -10,6 +10,59 @@ $pulsatingBlue: #10AFE2;
 $black: #000000;
 //Fonts
 
+//Bootstrap overrides
+.carousel-indicators {
+	li {
+		border: 1px solid $lightBlue;
+	}
+	.active {
+		background-color: $darkGrey;
+		border: 1px solid $lightBlue;
+	}
+}
+
+.carousel-control {
+	color: $darkGrey;
+}
+.carousel {
+	.left {
+		text-shadow: -3px 0px $lightBlue;
+	}
+
+	.right {
+		text-shadow: 3px 0px $lightBlue;
+	}
+}
+
+.carousel-control:hover, .carousel-control:focus {
+	color: $darkGrey;
+}
+
+.btn-primary {
+	color: $lightBlue;
+	background-color: $black;
+	border-color: $black;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+	color: $lightBlue;
+	background-color: $black;
+	border-color: $black;
+
+	outline-offset: -2px;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline: 5px auto -moz-focus-ring-color;
+	outline: 5px auto -o-focus-ring-color;
+
+	-webkit-animation: glow 800ms ease-out infinite alternate;
+	-moz-animation: glow 800ms ease-out infinite alternate;
+	-o-animation: glow 800ms ease-out infinite alternate;
+	-ms-animation: glow 800ms ease-out infinite alternate;
+	animation: glow 800ms ease-out infinite alternate;
+}
+
 //Styles
 body {
 	background-color: $darkGrey;
@@ -159,4 +212,51 @@ h1, h2, h3, h4, h5 {
     100% {
 		color: rgba(55, 198, 244, .6);
     }
+}
+
+.navbar-nav {
+	li {
+		margin-left: 90px;
+		a {
+			color: $lightBlue;
+			@include transition-property(color);
+			@include transition-duration(1s);
+		}
+	}
+	li:hover { 
+		a {
+			color: $darkGrey;
+		}
+	}
+	li.activated { 
+		a {
+			color: $darkGrey;
+		}
+	}
+}
+
+.cart {
+	padding-top: 8px;
+	margin-bottom: 0px;
+}
+
+
+.button-selection {
+	margin: 15px 0px;
+
+	select {
+		background-color: $black;
+		border: $lightBlue;
+	}
+}
+//T-shirt image styles
+.shirt-image {
+	width: 100%;
+	border: 2px solid $black;
+}
+
+#tshirt-modal-image {
+	width: auto;
+	height: 65%;
+	border: 2px solid $black;
 }
