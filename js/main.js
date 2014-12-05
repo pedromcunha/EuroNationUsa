@@ -70,7 +70,7 @@ $(document).ready(function() {
     });
 
     //Add loading for all images
-    // $('.shirt-image').after(loadingIcon);
+    $('.shirt-image').after(loadingIcon);
 
     //shirt modal
     $('.shirt-image').bind('click', function(event) {
