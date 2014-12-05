@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5 {
 		border: $lightBlue;
 	}
 }
-//T-shirt image styles
+//t-shirt image styles
 .shirt-image {
 	width: 100%;
 	border: 2px solid $black;
@@ -309,4 +309,19 @@ h1, h2, h3, h4, h5 {
 		background-color: $black;
 		width: 105%;
 	}
+}
+//pagination styles
+.pagination > li > a {
+	background-color: $black;
+	color: $lightBlue;
+	border: $black;
+	-webkit-animation: glow 800ms ease-out infinite alternate;
+	-moz-animation: glow 800ms ease-out infinite alternate;
+	-o-animation: glow 800ms ease-out infinite alternate;
+	-ms-animation: glow 800ms ease-out infinite alternate;
+	animation: glow 800ms ease-out infinite alternate;
+}
+
+.pagination > li > a:hover {
+	background-color: #2D2B2B;
 }
