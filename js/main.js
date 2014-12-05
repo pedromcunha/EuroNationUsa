@@ -86,16 +86,18 @@ $(document).ready(function() {
     			currentImageDesign = parseFloat(image.attr('src')[15]),
     			newImageSrc;
     		
-    		if(dir === 'next-shirt' && currentImageDesign !== 5) {
+    		if(dir === 'next-shirt') {
     			newImageSrc = currentImageDesign + 1;
     		}
 
-    		if(dir === 'prev-shirt' && currentImageDesign !== 5) {
+    		if(dir === 'prev-shirt') {
     			newImageSrc = currentImageDesign - 1;
     		}
-
-    		if(currentImageDesign === 5) {
+    		if(newImageSrc > 5) {
     			newImageSrc = 1;
+    		}
+    		if(newImageSrc < 1) {
+    			newImageSrc = 5;
     		}
     		image.fadeOut(400, function() {
 	    		image.attr('src', image.attr('src').replace(currentImageDesign + '-thumb', newImageSrc + '-thumb'));
