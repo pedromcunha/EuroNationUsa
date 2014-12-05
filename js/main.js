@@ -74,6 +74,7 @@ $(document).ready(function() {
     	$('#tshirt-modal').modal('show');
     });
     $('.shirt-image').on('load', function(){
+    	console.log('loaded');
 	  // hide/remove the loading image
 	  $(this).next('.loading').remove();
 	});
