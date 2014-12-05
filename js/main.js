@@ -1,4 +1,6 @@
+/*====================================================================================*/
 /*=====================HTML TEMPLATES (extrapolate later) ============================*/
+/*====================================================================================*/
 var paypalAddToCart = 
 	'<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >' +
 	'<input type="hidden" name="cmd" value="_s-xclick">'+
@@ -37,6 +39,9 @@ var viewCartButton =
 	'</form>';
 
 var loadingIcon = '<div class="loading"><i class="fa fa-spin fa-spinner"></i></div>';
+/*============================================================================*/
+/*=====================jQuery once page is loaded ============================*/
+/*============================================================================*/
 $(document).ready(function() {
     $('.paypal-cart').html(paypalAddToCart);
     $('.paypal-view-cart').html(viewCartButton);
@@ -65,17 +70,45 @@ $(document).ready(function() {
     });
 
     //Add loading for all images
-    $('.shirt-image').after(loadingIcon);
+    // $('.shirt-image').after(loadingIcon);
 
     //shirt modal
     $('.shirt-image').bind('click', function(event) {
     	var imageUrl = $(this).attr('src');
     	$('#tshirt-modal-image').attr('src', imageUrl);
     	$('#tshirt-modal').modal('show');
+
+    	//t-shirt controls added to the html buttons
+    	function imageSlider (event) {
+    		event.preventDefault();
+    		var dir = $(this).attr('id'),
+    			image = $('#tshirt-modal-image'),
+    			currentImageDesign = parseFloat(image.attr('src')[15]),
+    			newImageSrc;
+    		
+    		if(dir === 'next-shirt' && currentImageDesign !== 5) {
+    			newImageSrc = currentImageDesign + 1;
+    		}
+
+    		if(dir === 'prev-shirt' && currentImageDesign !== 5) {
+    			newImageSrc = currentImageDesign - 1;
+    		}
+
+    		if(currentImageDesign === 5) {
+    			newImageSrc = 1;
+    		}
+    		image.attr('src', image.attr('src').replace(currentImageDesign + '-thumb', newImageSrc + '-thumb'));
+    		
+    	}
+
+
+    	$('#next-shirt').bind('click', imageSlider);
+    	$('#prev-shirt').bind('click', imageSlider);
     });
+
     $('.shirt-image').on('load', function(){
-    	console.log('loaded');
 	  // hide/remove the loading image
 	  $(this).next('.loading').remove();
 	});
+
 });
