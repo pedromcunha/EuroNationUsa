@@ -11,6 +11,12 @@ $black: #000000;
 //Fonts
 
 //Bootstrap overrides
+.container {
+	section {
+		margin-bottom: 40px;
+	}
+}
+
 .carousel-indicators {
 	li {
 		border: 1px solid $lightBlue;
@@ -215,6 +221,9 @@ h1, h2, h3, h4, h5 {
 		color: rgba(55, 198, 244, .6);
     }
 }
+.navbar {
+	margin-bottom: 40px;
+}
 
 .navbar-nav {
 	li {
@@ -284,7 +293,7 @@ h1, h2, h3, h4, h5 {
 //Apparel specific styles
 #apparel {
 	.row + .row {
-		margin-top: 25px;
+		margin-top: 40px;
 	}
 }
 
