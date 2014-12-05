@@ -63,6 +63,7 @@ $(document).ready(function() {
     	event.preventDefault();
     	var clickedTab = $(this).attr('href');
 
+    	window.location.hash = clickedTab;
 		$('.nav').children('li').removeClass('activated'); 	
 		$(this).parent().addClass('activated');
 		sections.hide('slow');
