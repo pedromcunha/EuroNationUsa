@@ -288,10 +288,14 @@ h1, h2, h3, h4, h5 {
 
 //modal specific styles
 .modal-dialog {
-	.carousel-control.right {
-		right: -35px;
-	}
 	.carousel-control.right, .carousel-control.left {
 		background-image: none;
+	}
+}
+
+#tshirt-modal {
+	.modal-content {
+		background-color: $black;
+		width: 105%;
 	}
 }

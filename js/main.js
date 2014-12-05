@@ -97,8 +97,10 @@ $(document).ready(function() {
     		if(currentImageDesign === 5) {
     			newImageSrc = 1;
     		}
-    		image.attr('src', image.attr('src').replace(currentImageDesign + '-thumb', newImageSrc + '-thumb'));
-    		
+    		image.fadeOut(400, function() {
+	    		image.attr('src', image.attr('src').replace(currentImageDesign + '-thumb', newImageSrc + '-thumb'));
+    			image.fadeIn(200);
+    		});
     	}
 
 
