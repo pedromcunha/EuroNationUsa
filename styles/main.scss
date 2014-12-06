@@ -8,6 +8,7 @@ $darkGrey: #5e5f5f;
 $lightBlue: #37c6f4;
 $pulsatingBlue: #10AFE2;
 $black: #000000;
+$grayedOut: #4D4747;
 //Fonts
 
 //Bootstrap overrides
@@ -322,6 +323,30 @@ h1, h2, h3, h4, h5 {
 	animation: glow 800ms ease-out infinite alternate;
 }
 
-.pagination > li > a:hover {
-	background-color: #2D2B2B;
+.pagination {
+	li  {
+		a:hover {
+			background-color: #2D2B2B;
+		}
+		a:focus {
+			background-color: $black;
+		}
+	}
+	.disabled {
+		a {
+			background-color: $grayedOut;
+			pointer-events: none;
+		}
+	}
+	.active {
+		a {
+			color: $pulsatingBlue;
+			background-color: $black;
+			pointer-events: none;
+		}
+		a:focus {
+			background-color: $black;
+			color: $pulsatingBlue;
+		}
+	}
 }

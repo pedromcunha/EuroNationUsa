@@ -45,10 +45,14 @@ var loadingIcon = '<div class="loading"><i class="fa fa-spin fa-spinner"></i></d
 $(document).ready(function() {
     $('.paypal-cart').html(paypalAddToCart);
     $('.paypal-view-cart').html(viewCartButton);
-    //sections on the webpage
+    //setting page to launch, general housekeeping
     var sections = $('.container').children('section');
     sections.hide();
     $('#home').show();
+    $('#apparel').children('section').hide();
+    $('#apparel').children('#page1').show();
+    //variables needed initially
+    var apparelSubPagination = 1;
 
     //Change the design value on the fly
     $('.paypal').bind('click', function() {
@@ -69,6 +73,36 @@ $(document).ready(function() {
 		sections.hide('slow');
 		$(clickedTab).show('slow');
     });
+    //pagination for apparel
+    $('#apparel-pagination').find('a').bind('click', function(event) {
+    	event.preventDefault();
+    	$('#prevPage, #nextPage').removeClass('disabled');
+    	var nextPage = $(this).attr('value');
+    	if(nextPage == 'prev') {
+    		apparelSubPagination = parseFloat(apparelSubPagination) - 1;
+    	}
+    	else if (nextPage == 'next') {
+    		apparelSubPagination = parseFloat(apparelSubPagination) + 1;
+    	}
+    	else {
+    		apparelSubPagination = nextPage;
+    	}
+    	var nextPage = '#page'+ apparelSubPagination;
+    	$('#apparel-pagination').children('li').removeClass('active');
+    	$('#apparel').children('section').hide('slow');
+    	$(nextPage).show('slow');
+    	$(this).parent().addClass('active');
+    	if(apparelSubPagination == 1) {
+    		$('#prevPage').addClass('disabled');
+    		$('#prevPage').removeClass('active');
+    	}
+    	else if(apparelSubPagination == 2) {
+    		$('#nextPage').addClass('disabled');
+    		$('#nextPage').removeClass('active');
+    	}
+
+    });
+
 
     //Add loading for all images
     $('.shirt-image').after(loadingIcon);
