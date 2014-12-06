@@ -77,30 +77,30 @@ $(document).ready(function() {
     $('#apparel-pagination').find('a').bind('click', function(event) {
     	event.preventDefault();
     	$('#prevPage, #nextPage').removeClass('disabled');
+    	$('#apparel-pagination').children('li').removeClass('active');
     	var nextPage = $(this).attr('value');
     	if(nextPage == 'prev') {
     		apparelSubPagination = parseFloat(apparelSubPagination) - 1;
+    		$('a[value="'+apparelSubPagination+'"]').parent('li').addClass('active');
     	}
     	else if (nextPage == 'next') {
     		apparelSubPagination = parseFloat(apparelSubPagination) + 1;
+    		$('a[value="'+apparelSubPagination+'"]').parent('li').addClass('active');
     	}
     	else {
     		apparelSubPagination = nextPage;
+    		$(this).parent().addClass('active');
     	}
-    	var nextPage = '#page'+ apparelSubPagination;
-    	$('#apparel-pagination').children('li').removeClass('active');
+    	nextPage = '#page'+ apparelSubPagination;
     	$('#apparel').children('section').hide('slow');
     	$(nextPage).show('slow');
-    	$(this).parent().addClass('active');
+
     	if(apparelSubPagination == 1) {
     		$('#prevPage').addClass('disabled');
-    		$('#prevPage').removeClass('active');
     	}
     	else if(apparelSubPagination == 2) {
     		$('#nextPage').addClass('disabled');
-    		$('#nextPage').removeClass('active');
     	}
-
     });
 
 
