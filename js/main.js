@@ -141,9 +141,16 @@ $(document).ready(function() {
     	$('#prev-shirt').bind('click', imageSlider);
     });
 
-    $('.shirt-image').on('load', function(){
-	  // hide/remove the loading image
-	  $(this).next('.loading').remove();
-	});
+    $('.shirt-image').on('mouseover', function() {
+        $(this).siblings('.view-more').removeClass('hidden');
+    });
+
+    $('.view-more').on('mouseout', function() {
+        $(this).addClass('hidden');
+    });
+
+    $('.view-more').on('click', function() {
+        $(this).siblings('.shirt-image').click();
+    });
 
 });

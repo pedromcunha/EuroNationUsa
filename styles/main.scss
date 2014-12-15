@@ -268,21 +268,22 @@ h1, h2, h3, h4, h5 {
 }
 
 #tshirt-modal-image {
-	width: auto;
+	width: 100%;
 	height: 65%;
 	border: 2px solid $black;
 }
 
-.loading {
+.view-more {
 	background-color: white;
 	height: 100%;
-	width: 100%;
+	width: 92%;
 	position: absolute;
 	top: 0px;
-	opacity: 0.6;
+	opacity: 0.4;
+	cursor: pointer;
 
-	.fa-spin {
-		font-size: 50px;
+	.fa-search {
+		font-size: 30px;
 		vertical-align: middle;
 		line-height: 227px;
 		text-align: center;
@@ -308,7 +309,7 @@ h1, h2, h3, h4, h5 {
 #tshirt-modal {
 	.modal-content {
 		background-color: $black;
-		width: 105%;
+		width: 100%;
 	}
 }
 //pagination styles
