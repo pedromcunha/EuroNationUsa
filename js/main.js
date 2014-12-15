@@ -153,4 +153,20 @@ $(document).ready(function() {
         $(this).siblings('.shirt-image').click();
     });
 
+    $('#contact-btn').on('click', function(event) {
+        var subject = $('#reqName').val(),
+            body =  $('#reqMessage').val(),
+            email = $('#reqEmail').val(),
+            url = "?subject="+subject+"&body="+body,
+            href = $(this).attr('href');
+
+        $(this).attr('href', href+url);
+        if(body && url && email) {
+            $(this).click();
+        } 
+        else {
+            event.preventDefault();
+        }
+    });
+
 });

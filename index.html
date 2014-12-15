@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Euro Nation Usa</title>
+	<title>EuroNationUsa</title>
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
@@ -145,7 +145,34 @@
 			<h1>accessories</h1>
 		</section>
 		<section id="contact">
-			<h1>contact</h1>
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="text-center">Need to reach me?</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<h3><span class="label label-default">Email</span> tiagosssc@yahoo.com</h3>
+					<h3><span class="label label-default">Phone</span> 516-698-6272</h3>
+				</div>
+				<div class="col-md-4">
+					<form role="form">
+					  <div class="form-group">
+					    <label for="reqName">Name</label>
+					    <input type="text" class="form-control" id="reqName" name="Name" placeholder="John Smith" required>
+					  </div>
+					  <div class="form-group">
+					    <label for="reqEmail">Email</label>
+					    <input type="email" class="form-control" id="reqEmail" name="Email" placeholder="example@email.com" required>
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputFile">Message</label>
+					    <textarea class="form-control" name="Message" id="reqMessage" required></textarea>
+					  </div>
+					  <a id="contact-btn" type="submit" href="mailto:tiagosssc@yahoo.com" class="btn btn-primary">Submit</a>
+					</form>
+				</div>
+			</div>
 		</section>
 	</section>
 	<div id="tshirt-modal" class="modal fade">
