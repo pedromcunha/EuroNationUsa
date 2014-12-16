@@ -30,6 +30,40 @@ var paypalAddToCart =
 	'<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">'+
 	'</form>';
 
+var decalAddToCartBtn = 
+    '<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">' +
+    '<input type="hidden" name="cmd" value="_s-xclick">' +
+    '<input type="hidden" name="hosted_button_id" value="LKCVDDBYNKDZN">' +
+    '<table class="button-selection">'+
+    '<tr><td><input type="hidden" name="on0" value="Color">Color</td></tr><tr><td><select name="os0">'+
+    '<option value="Black">Black </option>'+
+    '<option value="Blue">Blue </option>'+
+    '<option value="Grey">Grey </option>' +
+    '<option value="White">White </option>' +
+    '</select> </td></tr>' +
+    '</table>' +
+    '<button type="submit"  class="btn btn-primary paypal" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><i class="fa fa-shopping-cart"></i> Add to cart </button>'+
+    '<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">'+
+    '</form>';
+
+var decalAddToCartBtnSm = 
+    '<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">'+
+    '<input type="hidden" name="cmd" value="_s-xclick">'+
+    '<input type="hidden" name="hosted_button_id" value="6UN2U6KH5XYUQ">'+
+    '<table class="button-selection">'+
+    '<tr><td><input type="hidden" name="on0" value="Color">Color</td></tr><tr><td><select name="os0">'+
+        '<option value="Black">Black </option>'+
+        '<option value="Blue">Blue </option>'+
+        '<option value="Grey">Grey </option>'+
+        '<option value="White">White </option>'+
+    '</select> </td></tr>'+
+    '</table>'+
+    '<button type="submit" class="btn btn-primary paypal" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><i class="fa fa-shopping-cart"></i> Add to cart </button>'+
+    '<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">'+
+    '</form>';
+
+
+
 var viewCartButton = 
 	'<form target="paypal" class="cart" action="https://www.paypal.com/cgi-bin/webscr" method="post" >'+
 		'<input type="hidden" name="cmd" value="_s-xclick">'+
@@ -44,7 +78,9 @@ var loadingIcon = '<div class="loading"><i class="fa fa-spin fa-spinner"></i></d
 /*============================================================================*/
 $(document).ready(function() {
     $('.paypal-cart').html(paypalAddToCart);
+    $('.paypal-cart-decal').html(decalAddToCartBtn);
     $('.paypal-view-cart').html(viewCartButton);
+    $('.paypal-cart-decal-sm').html(decalAddToCartBtnSm);
     //setting page to launch, general housekeeping
     var sections = $('.container').children('section');
     sections.hide();
