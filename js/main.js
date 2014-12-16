@@ -152,3 +152,7 @@ $(document).ready(function() {
     });
 
 });
+
+$(window).load(function() {
+    $('.loading-overlay').addClass('hidden');
+});
