@@ -110,35 +110,17 @@ $(document).ready(function() {
     	$('#tshirt-modal').modal('show');
 
     	//t-shirt controls added to the html buttons
-    	function imageSlider (event) {
-    		event.preventDefault();
-    		var dir = $(this).attr('id'),
-    			image = $('#tshirt-modal-image'),
-    			currentImageDesign = parseFloat(image.attr('src')[15]),
-    			newImageSrc;
-    		
-    		if(dir === 'next-shirt') {
-    			newImageSrc = currentImageDesign + 1;
-    		}
+    	function createImageSrc (imageUrl) {
+                var i = 1,
+                    design = imageUrl.slice(0, 15);
+            for(i; i < 6; i++) {
+                var url = design + i + '-thumb.png',
+                    shirtId = '#shirt'+i;
 
-    		if(dir === 'prev-shirt') {
-    			newImageSrc = currentImageDesign - 1;
-    		}
-    		if(newImageSrc > 5) {
-    			newImageSrc = 1;
-    		}
-    		if(newImageSrc < 1) {
-    			newImageSrc = 5;
-    		}
-    		image.fadeOut(400, function() {
-	    		image.attr('src', image.attr('src').replace(currentImageDesign + '-thumb', newImageSrc + '-thumb'));
-    			image.fadeIn(200);
-    		});
+                $(shirtId).attr('src', url);
+            }
     	}
-
-
-    	$('#next-shirt').bind('click', imageSlider);
-    	$('#prev-shirt').bind('click', imageSlider);
+        createImageSrc(imageUrl);
     });
 
     $('.shirt-image').on('mouseover', function() {
