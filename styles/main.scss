@@ -70,6 +70,13 @@ $grayedOut: #4D4747;
 	animation: glow 800ms ease-out infinite alternate;
 }
 
+span.label {
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
 //Styles
 body {
 	background-color: $darkGrey;
@@ -374,5 +381,17 @@ h1, h2, h3, h4, h5 {
 			background-color: $black;
 			color: $pulsatingBlue;
 		}
+	}
+}
+
+#home {
+	.homepage-lg {
+		@include border-radius(30px);
+		width: 100%;
+		height: auto;
+	}
+	.homepage-sm {
+		width: 200px;
+		height: 200px;
 	}
 }

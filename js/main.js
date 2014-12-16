@@ -151,6 +151,18 @@ $(document).ready(function() {
         }
     });
 
+    //Homepage links
+    $('#footnote').find('a').bind('click', function(event) {
+        event.preventDefault();
+        var clickedTab = $(this).attr('href');
+
+        window.location.hash = clickedTab;
+        $('.nav').children('li').removeClass('activated');  
+        $('.nav').children('li').find(clickedTab).parent().addClass('activated');
+        sections.hide('slow');
+        $(clickedTab).show('slow');
+    });
+
 });
 
 $(window).load(function() {
